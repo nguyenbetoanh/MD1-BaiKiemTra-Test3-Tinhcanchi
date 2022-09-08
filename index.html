@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 3: Viết chương trình nhập vào năm sinh của một người và in ra tuổi của người đó theo can chi : ví dụ: 1984 in ra Giáp Tý-->
+<h1>Viết chương trình nhập vào năm sinh của một người</h1><br>
+<label>   Hãy nhập số năm sinh của 1 người</label> <br><br>
+<input id="nhap" type="text">
+<button onclick="age()">Tính tuổi</button>
+<h1 id="hienThi"></h1>
+<script>
+    function age(){
+        let tuoi = +document.getElementById('nhap').value
+        let can = tuoi%10
+        let chi =tuoi%12
+        let kq
+        let kq1
+        if (tuoi<0){
+            alert('vui lòng nhập lại')
+        }
+     switch (can){
+         case 0:
+             kq= "Canh";
+             break
+         case 1:
+             kq= "Tân";
+             break
+         case 2:
+             kq= "Nhâm";
+             break
+         case 3:
+             kq= "Quý";
+             break
+         case 4:
+             kq= "Giáp";
+             break
+         case 5:
+             kq= "Ất";
+             break
+         case 6:
+             kq= "Bính";
+             break
+         case 7:
+             kq= "Đinh";
+             break
+         case 8:
+             kq= "Mậu";
+             break
+         case 9:
+             kq= "Kỉ";
+             break
+        }
+        switch (chi){
+            case 0:
+                kq1= "Thân";
+                break
+            case 1:
+                kq1= "Dậu";
+                break
+            case 2:
+                kq1= " Tuất ";
+                break
+            case 3:
+                kq1= "Hợi";
+                break
+            case 4:
+                kq1= "Tý";
+                break
+            case 5:
+                kq1= "Sửu";
+                break
+            case 6:
+                kq1= "Dần";
+                break
+            case 7:
+                kq1= "Mão";
+                break
+            case 8:
+                kq1= "Thìn";
+                break
+            case 9:
+                kq1= "Tỵ";
+                break
+            case 10:
+                kq1= "Ngọ";
+                break
+            case 11:
+                kq1= "Mùi";
+                break
+        }
+        document.getElementById('hienThi').innerHTML=kq+ "&nbsp;"+kq1
+
+    }
+</script>
+
+</body>
+</html>
